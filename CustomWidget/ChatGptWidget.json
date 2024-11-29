@@ -1,0 +1,57 @@
+{
+    "id": "com.sap.chatgptwidget",
+    "version": "0.0.4",
+    "name": "ChatGPT",
+    "description": "ChatGPT Custom Widget for SAP Analytics Cloud",
+    "newInstancePrefix": "ChatGptWidget",
+    "vendor": "Adnan",
+    "eula": "",
+    "license": "MIT",
+    "icon": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-sap-chatgptwidget",
+            "url": "/ChatGptWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-sap-chatgptwidget-builder",
+            "url": "/ChatGptWidget_Builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "apiKey": {
+            "description": "Api Key of ChatGPT",
+            "type": "string",
+            "default": "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"
+        }
+    },
+    "methods": {
+        "setApiKey": {
+            "description": "Set Api Key of ChatGPT",
+            "parameters": [
+                {
+                    "name": "apiKey",
+                    "type": "string",
+                    "description": "Api Key of ChatGPT"
+                }
+            ],
+            "body": "this.apiKey = apiKey;"
+        },
+        "getApiKey": {
+            "returnType": "string",
+            "description": "Return Api Key of ChatGPT",
+            "body": "return this.apiKey;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
